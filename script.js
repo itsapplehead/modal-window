@@ -21,6 +21,15 @@ for (let i = 0; i < btnShow.length; i++) {
 btnClose.addEventListener("click", closeModal);
 overlay.addEventListener("click", closeModal);
 
+// ! Handling an Esc Keypress Event
+
+document.addEventListener("keydown", function (event) {
+  //  console.log(event.key);
+  if (event.key === "Escape" && !modal.classList.contains("hidden")) {
+    closeModal();
+  }
+});
+
 // for (let i = 0; i < btnShow.length; i++) {
 //   btnShow[i].addEventListener("click", function () {
 //     modal.classList.remove("hidden");
